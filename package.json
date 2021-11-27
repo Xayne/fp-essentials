@@ -1,0 +1,37 @@
+{
+    "name": "fp-essentials",
+    "version": "0.1.0",
+    "description": "bunch of basic utils and data-types for FP",
+    "keywords": [
+        "fp",
+        "functional-programming",
+        "typescript",
+        "essentials"
+    ],
+    "author": "xayne <xayne.rpc@gmail.com>",
+    "license": "MIT",
+    "sideEffects": false,
+
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rimraf ./compiled && tsc --project tsconfig.build.json",
+        "prepare": "npm run build"
+    },
+    "main": "compiled/index.js",
+    "types": "compiled/index.d.ts",
+    "files": [
+        "compiled/**/*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Xayne/fp-essentials.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Xayne/fp-essentials/issues"
+    },
+    "homepage": "https://github.com/Xayne/fp-essentials#readme",
+
+    "devDependencies": {
+        "rimraf": "^3.0.2"
+    }
+}

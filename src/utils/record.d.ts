@@ -1,0 +1,12 @@
+import { Maybe } from "../data/maybe";
+export declare const morph: <r>(props: Partial<r>) => (val: r) => r;
+export declare const morphFlipped: <r>(val: r) => (props: Partial<r>) => r;
+export declare const morph_: <r>(f: (r: r) => Partial<r>) => (val: r) => r;
+declare type RKey = number | string;
+export declare const arrToRec: <v, o, k extends RKey>(select: (v: v, i: number) => [k, o]) => (arr: v[]) => Record<k, o>;
+export declare const recFold: <v, o, k extends RKey>(rec: Partial<Record<k, v>>, initial: o, folder: (acc: o, v: v, k: k) => o) => o;
+export declare const recTryGet: <k extends RKey>(k: k) => <v>(rec: Record<k, v>) => Maybe<v>;
+export declare const recToArr: <k extends RKey, v, o>(proj: (v: v, k: k) => o) => (rec: Record<k, v>) => o[];
+export declare const recMap: <k extends RKey, v, o>(proj: (v: v, k: k) => o) => (rec: Record<k, v>) => Record<k, o>;
+export declare const recFilter: <k extends RKey, V>(filter: (k: k, v: V) => boolean) => (r: Record<k, V>) => Record<k, V>;
+export {};
