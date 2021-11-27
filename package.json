@@ -1,6 +1,6 @@
 {
     "name": "fp-essentials",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "bunch of basic utils and data-types for FP",
     "keywords": [
         "fp",
@@ -11,7 +11,6 @@
     "author": "xayne <xayne.rpc@gmail.com>",
     "license": "MIT",
     "sideEffects": false,
-
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "rimraf ./compiled && tsc --project tsconfig.build.json",
@@ -30,7 +29,6 @@
         "url": "https://github.com/Xayne/fp-essentials/issues"
     },
     "homepage": "https://github.com/Xayne/fp-essentials#readme",
-
     "devDependencies": {
         "rimraf": "^3.0.2"
     }
